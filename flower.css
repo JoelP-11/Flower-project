@@ -1395,7 +1395,7 @@ body {
   display: none; /* Start hidden */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .flower-title {
     font-size: 2.5rem; /* Adjust size for mobile */
     top: 5px; /* Adjust position for mobile */
