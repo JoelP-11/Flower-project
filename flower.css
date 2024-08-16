@@ -1346,25 +1346,52 @@ body {
   text-align: center;
   position: absolute;
   top: 10px; /* Adjust position as needed */
-  width: 100%;
+  left: 50%;
   z-index: 10; /* Ensure it is above other elements */
   opacity: 0; /* Start hidden */
-  transform: translateY(-20px); /* Start slightly above */
+  transform: translateX(-50%); /* Start slightly above */
   animation: title-load 2s forwards; /* Apply the animation */
   animation-delay: 2s; /* Delay to match flower animation */
+  white-space: nowrap;
 }
 
 @keyframes title-load {
   0% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-20px) translateX(-50%);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) translateX(-50%);
   }
 }
 
 .not-loaded .flower-title {
   animation-play-state: paused !important;
+}
+
+.initial-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20; /* Ensure it is above other elements */
+}
+
+.start-button {
+  font-size: 2rem;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.flower-screen {
+  display: none; /* Start hidden */
 }
