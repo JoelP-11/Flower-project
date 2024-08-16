@@ -1338,3 +1338,33 @@ body {
 .not-loaded * {
   animation-play-state: paused !important;
 }
+
+.flower-title {
+  font-size: 5rem; /* Adjust size as needed */
+  font-family: 'Comic Sans MS', 'serif'; /* Choose a font that complements the flower theme */
+  color: #4CAF50; /* Choose a color that matches the flower theme */
+  text-align: center;
+  position: absolute;
+  top: 10px; /* Adjust position as needed */
+  width: 100%;
+  z-index: 10; /* Ensure it is above other elements */
+  opacity: 0; /* Start hidden */
+  transform: translateY(-20px); /* Start slightly above */
+  animation: title-load 2s forwards; /* Apply the animation */
+  animation-delay: 2s; /* Delay to match flower animation */
+}
+
+@keyframes title-load {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.not-loaded .flower-title {
+  animation-play-state: paused !important;
+}
